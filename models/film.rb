@@ -85,6 +85,15 @@ def tickets()
   return Ticket.map_items(tickets)
 end
 
+def self.price
+  sql = "SELECT price FROM films;"
+  price_film = SqlRunner.run(sql)
+  return Film.map_items(price_film)
+end
 
+def count_customers
+  count_customers = customers()
+  return count_customers
+end
 
 end
